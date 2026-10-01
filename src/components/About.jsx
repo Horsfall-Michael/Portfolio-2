@@ -1,0 +1,38 @@
+const About = () => {
+  
+  return (
+    <>
+      <section id="about" className=" mt-10 mb-10 relative">
+        <div className="flex gap-3">
+          <p className="text-sm font-medium text-muted mb-4">About me</p>
+          <p className="section-number">01</p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20 mb-16">
+          <div className="md:w-[50%]">
+            <h2 className="text-xl font-medium text-text">
+              I like to turn Ideas into things that people can actually use{" "}
+            </h2>
+            <p className="text-sm font-semibold weight text-muted mt-3">
+              I'm a frontend developer focused on building responsive,
+              functional experiences. I enjoy solving problems through clean
+              interfaces and thoughtful interactions.
+            </p>
+          </div>
+          <div className="md:flex flex-col bg-[#0B0E17] z-0 border border-[#252A38] rounded-lg p-6">
+            <h3 className="text-lg font-bold text-text">
+              Building with curiosity + code.
+            </h3>
+            <p className="text-sm text-muted mt-2">
+              Websites • UI • Motion • Performance • APIs
+            </p>
+          </div>
+
+          
+        </div>
+        <hr className="border-border border-[muted] mt-6" />
+      </section>
+    </>
+  );
+};
+
+export default About;
