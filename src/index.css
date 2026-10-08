@@ -176,3 +176,17 @@ section {
   animation: marquee-right 45s linear infinite;
 }
 
+.number {
+
+  background: rgba(255, 255, 255, 0.01);
+
+  backdrop-filter:
+    blur(41px)
+    saturate(180%);
+
+  -webkit-backdrop-filter:
+    blur(41px)
+    saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

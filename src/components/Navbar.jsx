@@ -85,7 +85,14 @@ const Navbar = () => {
                 >
                   Stack
                 </a>
-
+                <a
+                  href="#process"
+                  className={`navlink hover:text-text ${
+                    activeSection === "process" ? "active" : ""
+                  }`}
+                >
+                  Process
+                </a>
                 <a
                   href="#contact"
                   className={`navlink hover:text-text ${
@@ -213,7 +220,17 @@ const Navbar = () => {
           >
             Stack
           </a>
-
+           <a
+            href="#process"
+            className={`transition-colors duration-200 ${
+              activeSection === "process"
+                ? "text-text"
+                : "text-muted hover:text-text"
+            }`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Process
+          </a>  
           <a
             href="#contact"
             className={`transition-colors duration-200 ${

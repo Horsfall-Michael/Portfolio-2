@@ -67,7 +67,7 @@ const Stack = () => {
           <p className="section-number">04</p>
         </div>
       </Reveal>
-      <div className="flex flex-col gap-5 md:gap-4 mb-16">
+      <div className="flex flex-col gap-5 md:gap-4 mb-2">
         <Reveal style={{ transitionDelay: "150ms" }}>
           <div>
             <h2 className="text-header-color font-semibold text-[22px]">
@@ -88,7 +88,7 @@ const Stack = () => {
             >
               <div
                 key={item.id}
-                className="flex items-center gap-2 mt-3 bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 px-4 py-2 rounded-full shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),_inset_0_-4px_10px_rgba(255,255,255,0.3)] border border-[#252A38]"
+                className="flex items-center gap-2 mt-3 bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 px-4 py-2 rounded-full shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),_inset_0_-4px_10px_rgba(255,255,255,0.3)] border border-[#252A38] transition-all duration-300 hover:-translate-y-2 hover:drop-shadow-[8px_12px_25px_rgba(255,255,255,0.10)]"
               >
                 <img src={item.logo} alt={item.name} className="w-6 h-6" />
 
@@ -101,7 +101,7 @@ const Stack = () => {
           <MovingStack />
         </Reveal>
       </div>
-      <hr className="border-border" />
+      <hr className="border-border md:mt-12" />
     </section>
   );
 };
