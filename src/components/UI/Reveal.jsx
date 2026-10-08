@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const Reveal = ({ children, className = "" }) => {
+const Reveal = ({ children, className = "" , style }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -9,7 +9,7 @@ const Reveal = ({ children, className = "" }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+          //observer.unobserve(entry.target);
         }
       },
       {
@@ -27,7 +27,8 @@ const Reveal = ({ children, className = "" }) => {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
+      style={style}
+      className={`transition-all duration-300 ease-out ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "translate-y-10 opacity-0"

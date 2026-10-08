@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Reveal from "./UI/Reveal.jsx";
 import arrow from "../assets/arrow.svg";
 
 const Services = () => {
@@ -37,12 +38,15 @@ const Services = () => {
 
   return (
     <section id="services">
+      <Reveal style={{ transitionDelay: "100ms" }}>
       <div className="relative flex gap-3">
         <p className="text-sm font-medium text-muted mb-4">Services</p>
         <p className="section-number">02</p>
       </div>
-
+      </Reveal>
+      
       <div className="flex flex-col gap-10 md:gap-4 mb-16">
+        <Reveal style={{ transitionDelay: "100ms" }}>
         <div className="">
           <h2 className="text-header-color font-semibold text-[22px]">
             Services I Provide
@@ -56,12 +60,14 @@ const Services = () => {
             delivering high-quality solutions that meet your needs.
           </p>
         </div>
+        </Reveal>
 
         <div className="md:hidden w-full">
           {services.map((service) => {
             const isOpen = openService === service.id;
 
             return (
+              <Reveal style={{ transitionDelay: `${service.id * 100}ms` }} key={service.id}>
               <div
                 key={service.id}
                 className="inline-block mt-2 w-full rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px"
@@ -98,6 +104,7 @@ const Services = () => {
                   </div>
                 </button>
               </div>
+              </Reveal>
             );
           })}
         </div>
@@ -106,6 +113,7 @@ const Services = () => {
           {services.map((service) => {
            
             return (
+              <Reveal style={{ transitionDelay: `${service.id * 100}ms` }} key={service.id}>
               <div
                 key={service.id}
                 className="inline-block mt-2 w-full rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px"
@@ -130,6 +138,7 @@ const Services = () => {
                   </div>
                 </button>
               </div>
+              </Reveal>
             );
           })}
         </div>

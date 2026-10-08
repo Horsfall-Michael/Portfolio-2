@@ -18,39 +18,47 @@ const Work = () => {
   return (
     <section id="work" className="mt-10">
       {/* Section heading */}
-      <div className="relative flex gap-3">
-        <p className="mb-4 text-sm font-medium text-muted">Featured Projects</p>
 
-        <p className="section-number">03</p>
-      </div>
+      <Reveal style={{ transitionDelay: "100ms" }}>
+        <div className="relative flex gap-3">
+          <p className="mb-4 text-sm font-medium text-muted">
+            Featured Projects
+          </p>
 
+          <p className="section-number">03</p>
+        </div>
+      </Reveal>
       <div className="mb-16 flex flex-col gap-10 text-[22px]">
         {/* Heading */}
-        <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-          <h2 className="text-header-color font-semibold">Selected Works</h2>
+        <Reveal style={{ transitionDelay: "150ms" }}>
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <h2 className="text-header-color font-semibold">Selected Works</h2>
 
-          <div className="flex gap-2 z-50 border border-[#252A38] rounded-full px-2 py-1 shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),_inset_0_-4px_10px_rgba(255,255,255,0.3)] bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 w-fit">
-            {filters.map((filter) => (
-              <button
-                key={filter.value}
-                type="button"
-                onClick={() => setActiveFilter(filter.value)}
-                className={`px-4 py-2 text-sm transition-all duration-300 ${
-                  activeFilter === filter.value
-                    ? " text-header-color"
-                    : "text-muted hover:text-text"
-                }`}
-              >
-                {filter.label}
-              </button>
-            ))}
+            <div className="flex gap-2 z-50 border border-[#252A38] rounded-full px-2 py-1 shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),_inset_0_-4px_10px_rgba(255,255,255,0.3)] bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 w-fit">
+              {filters.map((filter) => (
+                <button
+                  key={filter.value}
+                  type="button"
+                  onClick={() => setActiveFilter(filter.value)}
+                  className={`px-4 py-2 text-sm transition-all duration-300 ${
+                    activeFilter === filter.value
+                      ? " text-header-color"
+                      : "text-muted hover:text-text"
+                  }`}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-
+        </Reveal>
         {/* Project cards */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 relative">
           {filteredProjects.map((project) => (
-            <Reveal key={project.id}>
+            <Reveal
+              key={project.id}
+              style={{ transitionDelay: `${project.id * 100}ms` }}
+            >
               <article className="relative rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px">
                 <div className="h-full rounded-2xl bg-linear-to-br from-[#0B0E17] to-[#0B0E17]/40 p-4">
                   {/* Project image */}

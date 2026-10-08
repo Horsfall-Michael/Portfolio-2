@@ -4,7 +4,7 @@ import download from "../assets/download.svg";
 import potrait from "../assets/potrait.png";
 const Hero = () => {
   return (
-    <header id="home" className="relative">
+    <section id="home" className="relative">
       <div>
         <img
           src={heroBg}
@@ -64,7 +64,7 @@ const Hero = () => {
         </div>
       </div>
       <hr className=" border-border border-[muted] " />
-    </header>
+    </section>
   );
 };
 
