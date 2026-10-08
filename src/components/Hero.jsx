@@ -14,15 +14,17 @@ const Hero = () => {
       </div>
       <div className="pt-10 flex flex-col gap-10 md:flex-row justify-center items-center mt-18 xl:mt-25">
         <div className="">
-          <div className="font-bold text-white text-4xl md:text-[34px] lg:text-[50px] leading-[1.2] ">
-            <p className="text-[14px] font-medium">Hi, I'm Michael</p>
-            <h1 className="">I BUILD DIGITAL</h1>
-            <h1 className="font-bold text-header-color">EXPERIENCES</h1>
+          <div className="font-bold text-white leading-[1.2] ">
+            <p className="text-[14px] font-medium mb-2">Hi, I'm Michael</p>
+            <h1 className="text-xl md:text-[24px] lg:text-[30px] xl:text-[40px]">I BUILD THE PART OF THE WEB YOU TOUCH.</h1>
+            <h2 className="text-header-color text-xl md:text-[18px] lg:text-[25px] xl:text-[30px]">AND EVERYTHING HOLDING IT UP.</h2>
           </div>
           <p className="text-muted text-[14px] md:text-[14px] mt-2 md:mt-6 max-w-120">
-            Frontend developer creating fast, responsive and interactive web
-            experiences. I turn ideas into clean, functional and beautiful
-            interfaces.
+            Frontend developer. On the surface: buttons, forms, layouts and the
+            small details that decide whether a site feels right. Underneath:
+            API calls that fail gracefully, state that stays in sync, metadata
+            that makes a shared link look right, and pages that load before you
+            lose patience
           </p>
           <div className="flex md:w-[50vw] lg:flex-row gap-4 md:mb-5">
             <a
@@ -61,7 +63,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <hr className="border-border border-[muted] " />
+      <hr className=" border-border border-[muted] " />
     </header>
   );
 };

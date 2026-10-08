@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -48,6 +48,7 @@
 
   --font-primary: "Geist", sans-serif;
   --font-secondary: "Geist-Mono", sans-serif;
+  --font-tertiary: "Instrument Serif", serif;
 
 }
 
@@ -70,11 +71,6 @@ body {
     saturate(180%);
 
   border: 1px solid rgba(255, 255, 255, 0.18);
-
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.35),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.08),
-    0 25px 70px rgba(0, 0, 0, 0.25);
 
   border-radius: 24px;
 }
@@ -151,3 +147,32 @@ section {
   top: -3rem;
   user-select: none;
 }
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 45s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 45s linear infinite;
+}
+

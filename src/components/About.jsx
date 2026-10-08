@@ -1,5 +1,4 @@
 const About = () => {
-  
   return (
     <>
       <section id="about" className=" mt-10 mb-10 relative">
@@ -13,9 +12,10 @@ const About = () => {
               I like to turn Ideas into things that people can actually use{" "}
             </h2>
             <p className="text-sm font-semibold weight text-muted mt-3">
-              I'm a frontend developer focused on building responsive,
-              functional experiences. I enjoy solving problems through clean
-              interfaces and thoughtful interactions.
+              I'm a frontend developer with a BSc in Computer Science. I build
+              in React and Tailwind, usually starting from a Figma file and
+              finishing with a page that works as well on a phone as on a
+              desktop. Around the interface, I handle the connecting work: pulling in data from APIs, covering loading and error states, and setting up metadata so shared links look right.
             </p>
           </div>
           <div className="md:flex flex-col bg-[#0B0E17] z-0 border border-[#252A38] rounded-lg p-6">
@@ -26,8 +26,6 @@ const About = () => {
               Websites • UI • Motion • Performance • APIs
             </p>
           </div>
-
-          
         </div>
         <hr className="border-border border-[muted] mt-6" />
       </section>

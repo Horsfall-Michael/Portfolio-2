@@ -1,145 +1,134 @@
+import { useState } from "react";
+import Reveal from "./UI/Reveal.jsx";
+import projects from "./data/Projects.js";
 
 const Work = () => {
-  return (
-    const projects = [
-        {
-          id: 1,
-          title: "Resqura",
-          description:
-            "I build modern, responsive websites tailored to your business, brand, or personal goals. Each website is built with clean code, responsive layouts, and a focus on performance.",
-          image: "../assets/resqura.webp",
-          technologies: ["React", "Tailwind CSS", "JavaScript"],
-          tags:["Web Development", "UI/UX Design", "Responsive Design"]
-          category:["live", "all", "selected" ]
-        },
-        {
-          id: 2,
-          title: "My EduPal",
-          description:
-            "I turn designs and ideas into responsive, interactive interfaces that closely match the intended visual experience while maintaining usability across devices.",
-          image: "../assets/myedupal.webp"
-        },
-        {
-          id: 3,
-          title: "Amazon Copy",
-          description:
-            "I connect websites and applications to APIs and backend services, allowing them to work with real-time data, authentication, databases, and external services.",
-          image: "../assets/amazon-copy.webp"
-        },
-        {
-          id: 4,
-          title: "Performance Optimization",
-          description:
-            "I optimize websites for faster loading, better responsiveness, and improved user experience across different devices and network conditions.",
-        },
-      ];
-    
-      const toggleService = (id) => {
-        setOpenService(openService === id ? null : id);
-      };
-    
-      return (
-        <section>
-          <div className="relative flex gap-3">
-            <p className="text-sm font-medium text-muted mb-4">Services</p>
-            <p className="section-number">02</p>
-          </div>
-    
-          <div className="flex flex-col gap-10 md:gap-4 mb-16">
-            <div className="">
-              <h2 className="text-xl font-medium text-header-color">
-                Services I Provide
-              </h2>
-    
-              <p className="text-sm text-muted mt-3">
-                I help businesses and creators turn their ideas to life with modern,
-                responsive and scalable web solutions. I offer a range of services
-                to help you build and enhance your digital presence. From responsive
-                web design to interactive user interfaces, I am dedicated to
-                delivering high-quality solutions that meet your needs.
-              </p>
-            </div>
-    
-            <div className="md:hidden w-full">
-              {services.map((service) => {
-                const isOpen = openService === service.id;
-    
-                return (
-                  <div
-                    key={service.id}
-                    className="inline-block mt-2 w-full rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => toggleService(service.id)}
-                      aria-expanded={isOpen}
-                      className="rounded-2xl bg-linear-to-br from-[#0B0E17] to-[#0B0E17]/40 p-4 text-text text-left"
-                    >
-                      {" "}
-                      <div className="w-full flex items-center justify-between">
-                        <span>{service.title}</span>
-                        <img
-                          src={arrow}
-                          alt=""
-                          className={`ml-2 transition-transform duration-300 ${
-                            isOpen ? "rotate-[315deg]" : "rotate-[135deg]"
-                          }`}
-                        />
-                      </div>
-                      <div
-                        className={`grid transition-all duration-300 ease-in-out  ${
-                          isOpen
-                            ? "grid-rows-[1fr] opacity-100"
-                            : "grid-rows-[0fr] opacity-0"
-                        }`}
-                      >
-                        <div className="overflow-hidden">
-                          <p className="px-2 pb-2 pt-4 text-sm leading-6 text-muted">
-                            {service.description}
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-    
-            <div className="w-full grid-cols-2 gap-4 hidden md:grid">
-              {services.map((service) => {
-               
-                return (
-                  <div
-                    key={service.id}
-                    className="inline-block mt-2 w-full rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => toggleService(service.id)}
-                      className="rounded-2xl bg-linear-to-br from-[#0B0E17] to-[#0B0E17]/40 p-4 text-text text-left h-full"
-                    >
-                      {" "}
-                      <div className="w-full flex items-center justify-between">
-                        <span>{service.title}</span>
-                      </div>
-                      <div className="grid transition-all duration-300 ease-in-out">
-                        <div className="overflow-hidden">
-                          <p className="px-2 pb-2 pt-4 text-sm leading-6 text-muted">
-                            {service.description}
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-    
-          <hr className="border-border mt-6" />
-        </section>
-      );
-    )
-}
+  const [activeFilter, setActiveFilter] = useState("featured");
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category.includes(activeFilter));
+  const filters = [
+    { label: "Featured", value: "featured" },
+    { label: "Live", value: "live" },
+    { label: "Offline", value: "offline" },
+    { label: "All", value: "all" },
+  ];
 
-export default Work
+  return (
+    <section id="work" className="mt-10">
+      {/* Section heading */}
+      <div className="relative flex gap-3">
+        <p className="mb-4 text-sm font-medium text-muted">Featured Projects</p>
+
+        <p className="section-number">03</p>
+      </div>
+
+      <div className="mb-16 flex flex-col gap-10 text-[22px]">
+        {/* Heading */}
+        <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <h2 className="text-header-color font-semibold">Selected Works</h2>
+
+          <div className="flex gap-2 z-50 border border-[#252A38] rounded-full px-2 py-1 shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),_inset_0_-4px_10px_rgba(255,255,255,0.3)] bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 w-fit">
+            {filters.map((filter) => (
+              <button
+                key={filter.value}
+                type="button"
+                onClick={() => setActiveFilter(filter.value)}
+                className={`px-4 py-2 text-sm transition-all duration-300 ${
+                  activeFilter === filter.value
+                    ? " text-header-color"
+                    : "text-muted hover:text-text"
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Project cards */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 relative">
+          {filteredProjects.map((project) => (
+            <Reveal key={project.id}>
+              <article className="relative rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px">
+                <div className="h-full rounded-2xl bg-linear-to-br from-[#0B0E17] to-[#0B0E17]/40 p-4">
+                  {/* Project image */}
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} project preview`}
+                      className="h-[220px] w-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute left-7 top-7 flex h-6 min-w-20 items-center justify-center rounded-full bg-white px-3 shadow-[4px_10px_30px_rgba(0,0,0,0.35)]">
+                    {project.category.includes("live") ? (
+                      <span className="flex items-center gap-2 text-xs text-[#0B0E17]">
+                        <span className="h-2 w-2 animate-pulse rounded-full bg-[#0066FF]" />
+                        Live
+                      </span>
+                    ) : (
+                      <span className="text-xs text-[#0B0E17]">Offline</span>
+                    )}
+                  </div>
+
+                  {/* Project information */}
+                  <div className="mt-5">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-lg font-medium text-text">
+                        {project.title}
+                      </h3>
+                    </div>
+
+                    <p className="mt-3 text-sm leading-6 text-muted">
+                      {project.description}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-[#252A38] px-3 py-1 text-xs text-muted"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Bottom section */}
+                    <div className="mt-6 items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((technology) => (
+                          <span
+                            key={technology}
+                            className="text-xs text-muted mb-4"
+                          >
+                            {technology}
+                          </span>
+                        ))}
+                      </div>
+
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-[#0066FF] px-4 py-2 text-xs text-text transition-all duration-300 hover:border-[#47506B] hover:bg-[#252A38]"
+                      >
+                        View Project
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+
+      <hr className="mt-6 border-border" />
+    </section>
+  );
+};
+
+export default Work;

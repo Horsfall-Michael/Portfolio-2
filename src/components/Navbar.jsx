@@ -152,7 +152,7 @@ const Navbar = () => {
         <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="lg:hidden bg-[#0a0a0a] flex flex-col mt-6 items-center p-4 gap-8 text-[20px] text-muted rounded-lg"
+          className="lg:hidden bg-[#0a0a0a] flex flex-col mt-1 items-center p-4 gap-8 text-[20px] text-muted rounded-lg"
         >
           <a
             href="#home"

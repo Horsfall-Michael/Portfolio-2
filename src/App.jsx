@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
+import Work from "./components/Work.jsx";
+import Stack from "./components/Stack.jsx";
 import "./App.css";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Hero />
         <About />
         <Services />
+        <Work />
+        <Stack />
       </div>
     </>
   );

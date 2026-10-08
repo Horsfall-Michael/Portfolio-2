@@ -36,7 +36,7 @@ const Services = () => {
   };
 
   return (
-    <section>
+    <section id="services">
       <div className="relative flex gap-3">
         <p className="text-sm font-medium text-muted mb-4">Services</p>
         <p className="section-number">02</p>
@@ -44,7 +44,7 @@ const Services = () => {
 
       <div className="flex flex-col gap-10 md:gap-4 mb-16">
         <div className="">
-          <h2 className="text-xl font-medium text-header-color">
+          <h2 className="text-header-color font-semibold text-[22px]">
             Services I Provide
           </h2>
 
@@ -117,7 +117,9 @@ const Services = () => {
                 >
                   {" "}
                   <div className="w-full flex items-center justify-between">
-                    <span>{service.title}</span>
+                    <span className="text-[18px] font-semibold">
+                      {service.title}
+                    </span>
                   </div>
                   <div className="grid transition-all duration-300 ease-in-out">
                     <div className="overflow-hidden">
