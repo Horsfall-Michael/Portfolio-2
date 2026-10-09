@@ -124,7 +124,7 @@ const Process = () => {
           </div>
         </Reveal>
       </div>
-      <hr className="border-border mt-6" />
+      <hr className="hidden lg:block border-border mt-6" />
     </section>
   );
 };
