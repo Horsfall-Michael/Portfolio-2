@@ -10,7 +10,7 @@ const Footer = () => {
     {
       id: 1,
       name: "email",
-      link: "horsfallmichael423@gmail.com",
+      link: "mailto:horsfallmichael423@gmail.com",
       display: "Horsfall Michael",
       icon: email,
     },

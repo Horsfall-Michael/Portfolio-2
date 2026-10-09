@@ -5,7 +5,7 @@ import potrait from "../assets/potrait.png";
 const Hero = () => {
   return (
     <section id="home" className="relative">
-      <div>
+      <div className="">
         <img
           src={heroBg}
           alt="Hero Background"
@@ -13,7 +13,7 @@ const Hero = () => {
         />
       </div>
       <div className="pt-10 flex flex-col gap-10 md:flex-row justify-center items-center mt-18 xl:mt-25">
-        <div className="">
+        <div className="animate-slide-left">
           <div className="font-bold text-white leading-[1.2] ">
             <p className="text-[14px] font-medium mb-2">Hi, I'm Michael</p>
             <h1 className="text-xl md:text-[24px] lg:text-[30px] xl:text-[40px]">I BUILD THE PART OF THE WEB YOU TOUCH.</h1>
@@ -52,8 +52,8 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="relative w-full flex justify-center md:justify-end">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,102,225,0.5),_transparent_70%)] blur-2xl md:hidden" />
+        <div className="relative w-full flex justify-center md:justify-end animate-slide-right">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,102,225,0.5),transparent_70%)] blur-2xl md:hidden" />
 
           <img
             src={potrait}
@@ -63,7 +63,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <hr className=" border-border border-[muted] " />
+      <hr className=" border border-[muted] " />
     </section>
   );
 };

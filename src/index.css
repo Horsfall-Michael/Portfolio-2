@@ -19,14 +19,9 @@
   /* Text */
   --color-text: #f5f5f2;
   --color-muted: #9a9da7;
-  --color-dim: #626671;
 
   /* Brand */
   --color-header-color: #0066FF;
-
-  /* Accent */
-  --color-electric-blue: #4d8dff;
-  --color-blue-soft: #79acff;
 }
 
 @theme {
@@ -39,16 +34,12 @@
 
   --color-text: var(--color-text);
   --color-muted: var(--color-muted);
-  --color-dim: var(--color-dim);
 
   --color-header-color: var(--color-header-color);
 
-  --color-electric-blue: var(--color-electric-blue);
-  --color-blue-soft: var(--color-blue-soft);
 
   --font-primary: "Geist", sans-serif;
   --font-secondary: "Geist-Mono", sans-serif;
-  --font-tertiary: "Instrument Serif", serif;
 
 }
 
@@ -147,27 +138,6 @@ section {
   top: -3rem;
   user-select: none;
 }
-
-@keyframes marquee-left {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes marquee-right {
-  from {
-    transform: translateX(-50%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
 .animate-marquee-left {
   animation: marquee-left 45s linear infinite;
 }
@@ -189,4 +159,53 @@ section {
     saturate(180%);
 
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease-out both;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease-out both;
 }

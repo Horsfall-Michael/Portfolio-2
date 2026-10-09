@@ -39,7 +39,7 @@ const Navbar = () => {
             <p className="text-text">MICHAEL</p>
 
             {/* Navigation */}
-            <div className="hidden lg:flex md:items-center md:justify-between text-muted">
+            <div className="hidden xl:flex md:items-center md:justify-between text-muted">
               <div className="flex flex-col md:flex-row md:space-x-4 gap-12">
                 <a
                   href="#home"
@@ -106,7 +106,7 @@ const Navbar = () => {
 
             {/* Mobile menu */}
             <button
-              className="lg:hidden"
+              className="xl:hidden"
               aria-label={
                 isMenuOpen ? "Close navigation menu" : "Open navigation menu"
               }
@@ -132,9 +132,16 @@ const Navbar = () => {
             </button>
 
             {/* Get in touch */}
-            <div className="group hidden lg:flex md:items-center md:justify-between gap-2 p-1px rounded-[25px] hover:scale-105 transition duration-300 ease-in-out cursor-pointer shadow-[8px_12px_25px_-3px_rgba(0,0,0,0.1)]">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-3xl text-[12px] text-text shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25),inset_-4px_-4px_10px_rgba(0,0,0,1)]" >
-                <p>Get in touch</p>
+            <button
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+              className="group hidden xl:flex items-center justify-between gap-2 rounded-[25px] p-px cursor-pointer transition duration-300 ease-in-out hover:scale-105 shadow-[8px_12px_25px_-3px_rgba(0,0,0,0.1)]"
+            >
+              <div className="flex items-center gap-2 rounded-3xl px-4 py-2 text-[12px] text-text shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25),inset_-4px_-4px_10px_rgba(0,0,0,1)]">
+                <span>Get in touch</span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -146,12 +153,14 @@ const Navbar = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden="true"
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </nav>
@@ -220,7 +229,7 @@ const Navbar = () => {
           >
             Stack
           </a>
-           <a
+          <a
             href="#process"
             className={`transition-colors duration-200 ${
               activeSection === "process"
@@ -230,7 +239,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Process
-          </a>  
+          </a>
           <a
             href="#contact"
             className={`transition-colors duration-200 ${
@@ -241,7 +250,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
-          </a>   
+          </a>
         </nav>
       )}
     </div>
