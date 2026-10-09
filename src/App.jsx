@@ -6,6 +6,7 @@ import Work from "./components/Work.jsx";
 import Stack from "./components/Stack.jsx";
 import Process from "./components/Process.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Stack />
         <Process />
         <Contact/>
+        <Footer/>
       </div>
     </>
   );

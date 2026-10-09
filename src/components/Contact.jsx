@@ -91,6 +91,7 @@ const Contact = () => {
           </button>
         </form>
       </Reveal>
+      <hr className="lg:block border-border mt-6" />
     </section>
   );
 };
