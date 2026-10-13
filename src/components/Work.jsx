@@ -34,7 +34,7 @@ const Work = () => {
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <h2 className="text-header-color font-semibold">Selected Works</h2>
 
-            <div className="flex gap-2 z-50 border border-[#252A38] rounded-full px-2 py-1 shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),_inset_0_-4px_10px_rgba(255,255,255,0.3)] bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 w-fit">
+            <div className="flex gap-2 z-50 border border-[#252A38] rounded-full px-2 py-1 shadow-[inset_0_6px_25px_5px_rgba(0,0,0,1),inset_0_-4px_10px_rgba(255,255,255,0.3)] bg-linear-to-br from-[#0B0E17]  to-[#0B0E17]/40 w-fit">
               {filters.map((filter) => (
                 <button
                   key={filter.value}
@@ -66,7 +66,7 @@ const Work = () => {
                     <img
                       src={project.image}
                       alt={`${project.title} project preview`}
-                      className="h-[220px] w-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-55 w-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                   <div className="absolute left-7 top-7 flex h-6 min-w-20 items-center justify-center rounded-full bg-white px-3 shadow-[4px_10px_30px_rgba(0,0,0,0.35)]">

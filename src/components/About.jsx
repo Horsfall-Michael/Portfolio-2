@@ -36,7 +36,7 @@ const About = () => {
           </div>
         </Reveal>
 
-        <hr className="border-border border-[muted] mt-6" />
+        <hr className="border-border mt-6" />
       </section>
     </>
   );

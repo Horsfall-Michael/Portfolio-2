@@ -85,7 +85,7 @@ const Services = () => {
                       src={arrow}
                       alt=""
                       className={`ml-2 transition-transform duration-300 ${
-                        isOpen ? "rotate-[315deg]" : "rotate-[135deg]"
+                        isOpen ? "rotate-315" : "rotate-135"
                       }`}
                     />
                   </div>
