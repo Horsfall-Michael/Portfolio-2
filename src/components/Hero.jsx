@@ -26,22 +26,22 @@ const Hero = () => {
             that makes a shared link look right, and pages that load before you
             lose patience
           </p>
-          <div className="flex md:w-[50vw] lg:flex-row gap-4 md:mb-5">
+          <div className="flex flex-col md:flex-row md:w-[50vw] gap-4 md:mb-5">
             <a
               href="#work"
-              className="mt-4 md:mt-8 inline-block bg-white/2 shadow-[4px_4px_20px_rgba(255,255,255,0.13),inset_4px_4px_4px_rgba(255,255,255,0.08)] text-white px-6 py-3 rounded-full text-[12px] md:text-[16px] font-medium hover:bg-white/10 transition duration-300 border border-white/30"
+              className="mt-4 md:mt-8 flex justify-center items-center bg-white/2 shadow-[4px_4px_20px_rgba(255,255,255,0.13),inset_4px_4px_4px_rgba(255,255,255,0.08)] text-white px-6 py-3 rounded-full text-[12px] md:text-[16px] font-medium hover:bg-white/10 transition duration-300 border border-white/30"
             >
               View My Work{" "}
               <img
                 src={arrow}
                 alt="Arrow"
-                className="w-5 h-5 ml-2 inline-block"
+                className="w-4 h-4 ml-2 inline-block rotate-135"
               />
             </a>
             <a
               download="Michael_Horsfall_Resume.pdf"
-              href="/assets/Michael_Horsfall_Resume.pdf"
-              className="mt-4 md:mt-8 inline-block bg-white/2 shadow-[4px_4px_20px_rgba(255,255,255,0.13),inset_4px_4px_4px_rgba(255,255,255,0.08)] text-white px-6 py-3 rounded-full text-[14px] md:text-[16px] font-medium hover:bg-white/10 transition duration-300 border border-white/30"
+              href="/Horsfall-Michael-CV.pdf"
+              className="mt-4 md:mt-8 flex justify-center items-center bg-white/2 shadow-[4px_4px_20px_rgba(255,255,255,0.13),inset_4px_4px_4px_rgba(255,255,255,0.08)] text-white px-6 py-3 rounded-full text-[14px] md:text-[16px] font-medium hover:bg-white/10 transition duration-300 border border-white/30"
             >
               Download CV{" "}
               <img

@@ -59,8 +59,8 @@ const Work = () => {
               key={project.id}
               style={{ transitionDelay: `${project.id * 100}ms` }}
             >
-              <article className="relative rounded-2xlp-px transition-all duration-300 hover:-translate-y-2">
-                <div className="h-full rounded-2xl bg-linear-to-br from-[#0B0E17] to-[#0B0E17]/40 p-4">
+              <article className="relative rounded-2xlp-px transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="h-full rounded-2xl bg-linear-to-br from-[#0B0E17] to-[#0B0E17]/40 p-4 border border-border">
                   {/* Project image */}
                   <div className="overflow-hidden rounded-xl">
                     <img

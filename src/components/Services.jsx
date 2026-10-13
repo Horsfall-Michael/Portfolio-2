@@ -70,7 +70,7 @@ const Services = () => {
               <Reveal style={{ transitionDelay: `${service.id * 100}ms` }} key={service.id}>
               <div
                 key={service.id}
-                className="inline-block mt-2 w-full rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px"
+                className="inline-block mt-2 w-full h-full rounded-2xl bg-linear-to-br from-[#252A38] via-[#47506B]/30 to-[#68779E]/20 p-px"
               >
                 <button
                   type="button"
